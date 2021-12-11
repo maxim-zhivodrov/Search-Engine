@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="698.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="corpusPathText" layoutX="196.0" layoutY="100.0" prefHeight="31.0" prefWidth="188.0" />
+      <TextField fx:id="postingPathText" layoutX="196.0" layoutY="140.0" prefHeight="31.0" prefWidth="188.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="browseC" layoutX="28.0" layoutY="103.0" mnemonicParsing="false" onAction="#browse" prefHeight="26.0" prefWidth="161.0" text="Corpus path" />
+      <Button fx:id="browsePF" layoutX="28.0" layoutY="143.0" mnemonicParsing="false" onAction="#browse" prefHeight="26.0" prefWidth="162.0" text="Posting files path" />
+      <Button fx:id="startButton" layoutX="41.0" layoutY="224.0" mnemonicParsing="false" onAction="#readParseAndIndex" text="START" />
+      <CheckBox fx:id="stemmCheck" layoutX="41.0" layoutY="182.0" mnemonicParsing="false" onAction="#checkStemm" text="Stemming" />
+      <Button layoutX="127.0" layoutY="224.0" mnemonicParsing="false" onAction="#resetSystem" text="RESET" />
+      <Button fx:id="showButton" layoutX="351.0" layoutY="204.0" mnemonicParsing="false" onAction="#showDic" text="Show Dictionary" />
+      <Button fx:id="loadButton" layoutX="351.0" layoutY="243.0" mnemonicParsing="false" onAction="#loadDictionary" text="Load Dictionary to Memory" />
+      <Label layoutX="203.0" text="The Engine" textFill="#1908d3">
+         <font>
+            <Font name="Mistral" size="64.0" />
+         </font>
+      </Label>
+      <TextField fx:id="writeQueryText" layoutX="30.0" layoutY="445.0" />
+      <Label layoutX="32.0" layoutY="420.0" text="Write your own query" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="browseQueryButton" layoutX="280.0" layoutY="446.0" mnemonicParsing="false" onAction="#parseQueries" prefHeight="26.0" prefWidth="179.0" text="Browse for queries" wrapText="true" />
+      <Label layoutX="41.0" layoutY="314.0" text="Choose where to save results" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveQueryButton" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" onAction="#browse" prefHeight="23.0" prefWidth="76.0" text="Browse" />
+      <TextField fx:id="saveQueryText" layoutX="118.0" layoutY="344.0" />
+      <Label layoutX="290.0" layoutY="420.0" text="Browse for queries" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="runQueryButton" layoutX="210.0" layoutY="505.0" mnemonicParsing="false" onAction="#executeQuery" prefHeight="26.0" prefWidth="64.0" text="RUN">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="221.0" layoutY="438.0" text="OR" textFill="#ff2930">
+         <font>
+            <Font name="Bodoni MT Italic" size="31.0" />
+         </font>
+      </Label>
+      <Line endX="769.0" layoutX="115.0" layoutY="288.0" startX="-115.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="100.0" layoutX="13.0" layoutY="396.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="436.0" />
+      <Label layoutX="567.0" layoutY="71.0" text="Part A" textFill="#ea0202">
+         <font>
+            <Font name="Bell MT Italic" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="567.0" layoutY="322.0" text="Part B" textFill="#ea0202">
+         <font>
+            <Font name="Bell MT Italic" size="37.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="semanticsCheckBox" layoutX="290.0" layoutY="510.0" mnemonicParsing="false" text="Run Semantics" />
+   </children>
+</AnchorPane>
